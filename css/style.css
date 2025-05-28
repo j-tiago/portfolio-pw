@@ -1,0 +1,234 @@
+@font-face {
+    font-family: 'fonte-um';
+    src: url('/font/fonte-um.ttf') format('truetype');  
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'fonte-um', Arial, sans-serif;
+}
+
+body {
+    background-color: #f4f4f4;          
+    color: #333;
+    line-height: 1.6;
+}
+
+.container {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+header {
+    background-color: #9f1c1c;
+    color: white;
+    padding: 40px 0;
+    margin: 0px 10px 30px 10px;
+    border-bottom-left-radius: 15px;
+    border-bottom-right-radius: 15px;
+    text-align: center;
+}
+
+.cabecalho {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+}
+
+.perfil {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+}
+
+.foto-container {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    overflow: hidden;
+    border: 5px solid #6a1313;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.35);
+}
+
+.foto {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.info-pessoal {
+    text-align: center;
+    padding: 10px;
+}
+
+.info-pessoal h1 {
+    font-size: 2rem;
+    margin-bottom: 5px;
+}
+
+.contato {
+    margin-top: 10px;
+}
+
+.fa-phone {
+    margin-right: 5px;
+}
+.fa-envelope {
+    margin-right: 5px;
+}
+
+.botao-saiba-mais {
+    display: inline-block;
+    padding: 12px 24px;
+    background-color: #000000;
+    color: white;
+    text-decoration: none;
+    border-radius: 30px;
+    font-weight: bold;
+    transition: background-color 1.0s, transform 1.0s;
+    margin-top: 20px;
+}
+
+.botao-saiba-mais:hover {
+    background-color: #1a252f;
+    transform: translateY(-3px);
+}
+
+.card {
+    background-color: white;
+    border-radius: 8px;
+    padding: 20px;
+    margin-bottom: 20px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+}
+
+.card h2 {
+    color: #9f1c1c;
+    margin-bottom: 15px;
+    border-bottom: 2px solid #f0f0f0;
+    padding-bottom: 8px;
+}
+
+.card i {
+    margin-right: 8px;
+}
+
+.formacao-item {
+    padding: 5px 0;
+}
+
+.formacao-item h3 {
+    color: #2c3e50;
+    font-size: 1.1rem;
+}
+
+.experiencia ul {
+    list-style-type: none;
+}
+
+.experiencia li {
+    padding: 5px 0;
+    position: relative;
+    padding-left: 20px;
+}
+
+.experiencia li:before {
+    content: "•";
+    color: #470d0d;
+    position: absolute;
+    left: 0;
+    font-size: 1.5em;
+}
+
+.github-projetos .projeto-item {
+    border-bottom: 1px solid #b0b0b0;
+    padding: 12px 0;
+}
+
+.github-projetos .projeto-item:last-child {
+    border-bottom: none;
+}
+
+.github-projetos .projeto-nome {
+    font-weight: bold;
+    color: #9f1c1c;
+    text-decoration: none;
+    display: block;
+    margin-bottom: 5px;
+}
+
+.github-projetos .projeto-descricao {
+    font-size: 0.9rem;
+    color: #666;
+}
+
+.github-projetos .projeto-linguagem {
+    display: inline-block;
+    background-color: #e8e8e8;
+    padding: 2px 8px;
+    border-radius: 12px;
+    font-size: 0.8rem;
+    margin-top: 5px;
+}
+
+.carregando {
+    color: #888;
+    font-style: italic;
+}
+
+.rede-social-item {
+    margin: 10px 0;
+}
+
+.rede-social-item a {
+    color: #3498db;
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s;
+}
+
+.rede-social-item a:hover {
+    color: #2980b9;
+}
+
+footer {
+    background-color: #000000;
+    color: white;
+    padding: 20px 0;
+    text-align: center;
+    margin-top: 40px;
+}
+
+@media (min-width: 768px) {
+    .perfil {
+        flex-direction: row;
+        justify-content: center;
+        text-align: left;
+    }
+    
+    .info-pessoal {
+        text-align: left;
+        padding-left: 20px;
+    }
+    
+    main {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 20px;
+    }
+    
+    .sobre-mim, .github-projetos {
+        grid-column: 1 / -1;
+    }
+}
